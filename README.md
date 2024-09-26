@@ -32,22 +32,7 @@ After loading the data, here is a breakdown of the number of documents per categ
 |Accountability|42|
 |Health and Wellbeing|11|
 
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/category_distribution_before_cleaning.png "Category Distribution")
 
-As we can see, we have an imbalance data set and there are too few documents for Health and Wellbeing. We will be removing these documents and do the analysis with 3 categories. Here's the distribution after cleaning the data:
-
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/category_distribution_after_cleaning.png "Final Data Set")
-
-We will use word clouds to show the words found for each category:
-
-### Travel:
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/wordcloud_travel.png "Travel Word Cloud")
-
-### Human Resources:
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/wordcloud_hr.png "Human Resources Word Cloud")
-
-### Accountability:
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/wordcloud_accountability.png "Accountability Word Cloud")
 
 
 ## Modeling
@@ -58,35 +43,17 @@ We will be using DummyClassifier as our baseline model. The accuracy for our bas
 
 Here are the results using different combinations of model, feature extraction (CountVectorizer and TfidVectorizer), and hyperparameters
 
-### Bag-of-words using CountVectorizer
-
-#### 1. CountVectorizer - Logical Regression - Default Parameters - Accuracy => **55.77%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_lgr_default.png "Bag-of-words: Confusion Matrix: Logistic Regression - Default Parameters")
-#### 2. CountVectorizer - Logical Regression - Best Parameters - Accuracy => **59.62%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_lgr_best.png "Bag-of-words: Confusion Matrix: Logistic Regression - Best Parameters")
-#### 3. CountVectorizer - Naive Bayes - Default Parameters - Accuracy => **76.92%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_nb_default.png "Bag-of-words: Confusion Matrix: Naive Bayes - Default Parameters")
-#### 4. CountVectorizer - Naive Bayes - Best Parameters - Accuracy => **76.92%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_nb_best.png "Bag-of-words: Confusion Matrix: Naive Bayes - Best Parameters")
-#### 5. CountVectorizer - Support Vector Machine - Default Parameters - Accuracy => **50%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_svm_default.png "Bag-of-words: Confusion Matrix: Support Vector Machine - Default Parameters")
-#### 6. CountVectorizer - Support Vector Machine - Best Parameters - Accuracy => **69.23%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_cvect_svm_best.png "Bag-of-words: Confusion Matrix: Support Vector Machine - Best Parameters")
-
-### TF-IDF using TfidVectorizer
-
-#### 1. TfidVectorizer - Logical Regression - Default Parameters - Accuracy => **75%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_lgr_default.png "TF-IDF: Confusion Matrix: Logistic Regression - Default Parameters")
-#### 2. TfidVectorizer - Logical Regression - Best Parameters - Accuracy => **71.15%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_lgr_best.png "TF-IDF: Confusion Matrix: Logistic Regression - Best Parameters")
-#### 3. TfidVectorizer - Naive Bayes - Default Parameters - Accuracy => **80.77%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_nb_default.png "TF-IDF: Confusion Matrix: Naive Bayes - Default Parameters")
-#### 4. TfidVectorizer - Naive Bayes - Best Parameters - Accuracy => **76.92%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_nb_best.png "TF-IDF: Confusion Matrix: Naive Bayes - Best Parameters")
-#### 5. TfidVectorizer - Support Vector Machine - Default Parameters - Accuracy => **50%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_svm_default.png "TF-IDF: Confusion Matrix: Support Vector Machine - Default Parameters")
-#### 6. TfidVectorizer - Support Vector Machine - Best Parameters - Accuracy => **76.92%**
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_svm_best.png "TF-IDF: Confusion Matrix: Support Vector Machine - Best Parameters")
+#### Word Count Box Plot
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/boxplot.png "Word Count Box Plot")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/category_freq.png "Category Frequency")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/cm_log_tuned.png "Confusion Matrix")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/dist_wc_zoom.png "Category Word Count Distribution Zoomed")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/dist_wc.png "Category Word Count Distribution")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/roc_log_tuned.png "ROC AUC")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_accountability.png "SHAP Accountability")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_health.png "SHAP Health")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_hr.png "SHAP HR")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_travel.png "SHAP Travel")
 
 Here's a summary of the accuracy on unseen/test data:
 
@@ -110,28 +77,4 @@ Here's a summary of the accuracy on unseen/test data:
 |TfidVectorizer - Support Vector Machine - Best Parameters|0.96|0.88|
 |TfidVectorizer - XGBoost - Default Parameters|1.00|0.86|
 |TfidVectorizer - XGBoost - Best Parameters|1.00|0.86|
-
-All of the models performed better compared to the baseline. In general, TF-IDF is better than bag-of-words in our particular use case. The highest accuracy of **80.77%** was achieved with TF-IDF feature selection, Naive Bayes, with default parameters. 
-
-Here's the classification report and confusion matrix for that model:
-
-||Precision|Recall|F1-score|Support|
-|--|--|--|--|--|
-|Accountability|0.77|0.83|0.80|12|
-|Human Resources|0.75|0.75|0.75|20|
-|Travel|0.89|0.85|0.87|20|
-| | | | | |
-|Accuracy| | |0.81|52|
-|Macro Avg|0.80|0.81|0.81|52|
-|Weighted Avg|0.81|0.81|0.81|52|
-
-The model has the highest precision of **89%** when predicting documents categorized as Travel. The classes in our dataset are relatively balanced since macro and weighted average are almost the same.
-
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/cm_tvect_nb_default.png "TF-IDF: Confusion Matrix: Naive Bayes - Default Parameters")
-
-
-
-
-
-
 
