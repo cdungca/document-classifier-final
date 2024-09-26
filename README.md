@@ -1,4 +1,4 @@
-# Document Classifier: Initial Report and Exploratory Data Analysis
+# Document Classifier: Final Report
 
 This is the first part of the capstone project for [UC Berkeley Professional Certificate in Machine Learning and Artificial Intelligence](https://em-executive.berkeley.edu/professional-certificate-machine-learning-artificial-intelligence). 
 
@@ -90,20 +90,26 @@ Here are the results using different combinations of model, feature extraction (
 
 Here's a summary of the accuracy on unseen/test data:
 
-|Model Combination|Test Accuracy|
-|-----------------|-------------|
-|CountVectorizer - Logical Regression - Default Parameters|55.77|
-|CountVectorizer - Logical Regression - Best Parameters|59.62|
-|CountVectorizer - Naive Bayes - Default Parameters|76.92|
-|CountVectorizer - Naive Bayes - Best Parameters|55.77|
-|CountVectorizer - Support Vector Machine - Default Parameters|50|
-|CountVectorizer - Support Vector Machine - Best Parameters|69.23|
-|TfidVectorizer - Logical Regression - Default Parameters|75|
-|TfidVectorizer - Logical Regression - Best Parameters|71.15|
-|TfidVectorizer - Naive Bayes - Default Parameters|**80.77**|
-|TfidVectorizer - Naive Bayes - Best Parameters|76.92|
-|TfidVectorizer - Support Vector Machine - Default Parameters|50|
-|TfidVectorizer - Support Vector Machine - Best Parameters|76.92|
+|Model Combination|Train AUC Score|Test AUC Score|
+|-----------------|---------------|--------------|
+|CountVectorizer - Baseline Model|0.54|0.49|
+|CountVectorizer - Logical Regression - Default Parameters|0.99|0.89|
+|CountVectorizer - Logical Regression - Best Parameters|0.99|0.89|
+|CountVectorizer - Naive Bayes - Default Parameters|0.98|0.91|
+|CountVectorizer - Naive Bayes - Best Parameters|0.98|0.91|
+|CountVectorizer - Support Vector Machine - Default Parameters|0.96|0.87|
+|CountVectorizer - Support Vector Machine - Best Parameters|0.96|0.87|
+|CountVectorizer - XGBoost - Default Parameters|1.00|0.88|
+|CountVectorizer - XGBoost - Best Parameters|1.00|0.88|
+|TfidVectorizer - Baseline Model|0.49|0.47|
+|TfidVectorizer - Logical Regression - Default Parameters|1.00|0.92|
+|TfidVectorizer - Logical Regression - Best Parameters|1.00|0.92|
+|TfidVectorizer - Naive Bayes - Default Parameters|0.98|**0.91**|
+|TfidVectorizer - Naive Bayes - Best Parameters|0.98|0.91|
+|TfidVectorizer - Support Vector Machine - Default Parameters|0.96|0.88|
+|TfidVectorizer - Support Vector Machine - Best Parameters|0.96|0.88|
+|TfidVectorizer - XGBoost - Default Parameters|1.00|0.86|
+|TfidVectorizer - XGBoost - Best Parameters|1.00|0.86|
 
 All of the models performed better compared to the baseline. In general, TF-IDF is better than bag-of-words in our particular use case. The highest accuracy of **80.77%** was achieved with TF-IDF feature selection, Naive Bayes, with default parameters. 
 
