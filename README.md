@@ -49,13 +49,13 @@ Below is the breakdown in graphical form:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/boxplot.png "Word Count Box Plot")
 
-The green line represents the median word count in each category and as observed, the average word count is less than 5000 for all categories. The word count distribution for Accountability is larger than the rest with a document containing more than 20,000 words. Health and Wellbeing has the smallest range for word count and both Human Resources and Travel are almost the same.
+The green line represents the median word count in each category and as observed, the average word count is less than 5,000 for all categories. The word count distribution for Accountability is larger than the rest with a document containing more than 20,000 words. Health and Wellbeing has the smallest range for word count and both Human Resources and Travel are almost the same.
 
 Here's the word count distribution across the entire data set:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/dist_wc_zoom.png "Word Count Distribution")
 
-Again, most of the documents can be found on the left side of the graph. The word count for these are between 0 to 5000.
+Again, most of the documents can be found on the left side of the graph. The word count for these are between 0 to 5,000.
 
 3. The figure below shows the most common words in the data set.
 
@@ -155,7 +155,7 @@ Here are some graphs that shows the most important words that contributed for ea
 For possible future improvements, the following can be explored:
 
 - As seen in the initial analysis, there's an imbalance in the data set and getting additional samples can improve the model.
-- Due to resource constraints, only a maximum of 1000 features where used in the modeling. Further increasing and testing it might be beneficial.
+- Due to resource constraints, only a maximum of 1,000 features where used in the modeling. Further increasing and testing it might be beneficial.
 - Deep learning, recurrent neural network, and transformer architecture should be tested in the next iteration.
 
 
