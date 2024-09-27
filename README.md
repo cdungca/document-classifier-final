@@ -66,7 +66,7 @@ Test set contains 57 documents.
 
 ## Modeling
 
-The goal is to find the best model which can accurately predict the category of the document. For this use case, each document is only assigned to a single category. The models that will be explored are as follows:
+The goal is to find the best model which can accurately predict the category of the document. For this use case, each document is only assigned to a single category. The models that will be used are:
 
 - Logistic Regression
 - Naive Bayes
@@ -88,7 +88,7 @@ Here are the recall scores for the different settings between train and test set
 |Logistic Regression - Default Parameters|0.95|0.68|
 |Naive Bayes - Default Parameters|0.91|0.74|
 |Support Vector Machine - Default Parameters|0.63|0.53|
-|XGBoost - Default Parameters|0.95|**0.75**|
+|**XGBoost - Default Parameters**|0.95|**0.75**|
 |Logistic Regression - Best Parameters|0.95|0.65|
 |Naive Bayes - Best Parameters|0.81|0.74|
 |Support Vector Machine - Best Parameters|0.79|0.58|
@@ -125,27 +125,27 @@ Finally, the confusion matrix below shows the performance of the model on accura
 
 The model correctly predicted the actual category each class:
 
-Accountabily - 10 out of 12
-Health and Wellbeing - 3 of 3
-Human Resources - 10 out of 19
-Travel - 20 out of 23
+Accountabily - 10 out of 12<br/>
+Health and Wellbeing - 3 of 3<br/>
+Human Resources - 10 out of 19<br/>
+Travel - 20 out of 23<br/>
 
 #### SHAP Analysis
 
 Here are some graphs that shows the most important words that contributed for each category:
-
+<br/>
 **Most Important Words for Accountability**
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_accountability.png "SHAP Accountability")
-
+<br/>
 **Most Important Words for Health and Wellbeing**
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_health.png "SHAP Health")
-
+<br/>
 **Most Important Words for Human Resources**
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_hr.png "SHAP HR")
-
+<br/>
 **Most Important Words for Travel**
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_travel.png "SHAP Travel")
-
+<br/>
 
 ### Next Steps
 
