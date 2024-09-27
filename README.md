@@ -41,6 +41,7 @@ Here's a breakdown of the number of documents per category:<br/>
 <br/>
 As seen above, there's an imbalance in the data set particularly for the category, Health and Wellbeing. There are only 11 documents for this category compared to the rest which contains around 40 - 74. 
 <br/>
+<br/>
 Below is the breakdown in graphical form:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/category_freq.png "Number of samples per Category")
