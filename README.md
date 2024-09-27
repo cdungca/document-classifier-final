@@ -39,7 +39,7 @@ After loading the data, here are a couple of observations on the data set:
 
 As seen above, there's an imbalance in the data set particularly for the category, Health and Wellbeing. There are only 11 documents for this category compared to the rest which contains around 40 - 74. 
 
-Below is the breakdown on a graphical form:
+Below is the breakdown in graphical form:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/category_freq.png "Number of samples per Category")
 
@@ -49,7 +49,7 @@ Below is the breakdown on a graphical form:
 
 The green line represents the median word count in each category and as observed, the average word count is less than 5000 for all categories. The word count distribution for Accountability is larger than the rest with a document containing more than 20,000 words. Health and Wellbeing has the smallest range for word count and both Human Resources and Travel are almost the same.
 
-Here's the word count across the entire data set:
+Here's the word count distribution across the entire data set:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/dist_wc_zoom.png "Word Count Distribution")
 
@@ -61,8 +61,8 @@ Again, most of the documents can be found on the left side of the graph. The wor
 
 Before modeling, the data set will be split into: 70% training and 30% test set.
 
-Training set contains 132 documents.
-Test set containe 57 documents.
+Training set contains 132 documents.<br/>
+Test set contains 57 documents.
 
 ## Modeling
 
