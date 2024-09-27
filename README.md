@@ -81,30 +81,30 @@ Here are the results using different combinations of model, feature extraction (
 Here's a summary of the metrics on unseen/test data:
 
 ##### Bag-of-words
-|Model Combination|Train AUC Score|Test AUC Score|
+|Model Combination|Train Micro Recall Score|Test MIcro Recall Score|
 |-----------------|---------------|--------------|
-|Baseline Model|0.54|0.56|
-|Logistic Regression - Default Parameters|1.00|0.88|
-|Naive Bayes - Default Parameters|0.99|**0.91**|
-|Support Vector Machine - Default Parameters|0.94|0.84|
-|XGBoost - Default Parameters|1.00|0.86|
-|Logistic Regression - Best Parameters|1.00|0.84|
-|Naive Bayes - Best Parameters|0.94|0.89|
-|Support Vector Machine - Best Parameters|0.97|0.87|
-|XGBoost - Best Parameters|1.00|0.83|
+|Baseline Model|0.30|0.33|
+|Logistic Regression - Default Parameters|0.95|0.68|
+|Naive Bayes - Default Parameters|0.91|0.74|
+|Support Vector Machine - Default Parameters|0.63|0.53|
+|XGBoost - Default Parameters|0.95|**0.75**|
+|Logistic Regression - Best Parameters|0.95|0.65|
+|Naive Bayes - Best Parameters|0.81|0.74|
+|Support Vector Machine - Best Parameters|0.79|0.58|
+|XGBoost - Best Parameters|0.95|0.68|
 
 ##### TF-IDF
 |Model Combination|Train AUC Score|Test AUC Score|
 |-----------------|---------------|--------------|
-|Baseline Model|0.56|0.59|
-|Logistic Regression - Default Parameters|0.99|0.90|
-|Naive Bayes - Default Parameters|0.96|0.89|
-|Support Vector Machine - Default Parameters|1.00|0.88|
-|XGBoost - Default Parameters|1.00|0.86|
-|Logistic Regression - Best Parameters|1.00|0.88|
-|Naive Bayes - Best Parameters|0.93|0.87|
-|Support Vector Machine - Best Parameters|0.99|0.89|
-|XGBoost - Best Parameters|1.00|0.83|
+|Baseline Model|0.27|0.28|
+|Logistic Regression - Default Parameters|0.91|0.74|
+|Naive Bayes - Default Parameters|0.85|0.72|
+|Support Vector Machine - Default Parameters|0.95|0.72|
+|XGBoost - Default Parameters|0.95|0.67|
+|Logistic Regression - Best Parameters|0.94|0.74|
+|Naive Bayes - Best Parameters|0.86|0.70|
+|Support Vector Machine - Best Parameters|0.92|0.68|
+|XGBoost - Best Parameters|0.95|0.61|
 
 ### Best Model
 
