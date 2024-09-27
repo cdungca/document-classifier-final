@@ -12,7 +12,7 @@ The data that needed for this study will be the actual text in each document and
 - After collecting the links, there's another script that will read each pdf and extract the full text.  
 - The final data set will be a csv file with the actual full text and the category assigned.
 
-To prepare the data for the analysis/modeling, the following steps steps and transformations were done:
+To prepare the data for the analysis/modeling, the following steps and transformations were done:
 
 - Remove rows with null values.
 - Change all texts to lower case.
@@ -28,7 +28,9 @@ After loading the data, here are a couple of observations on the data set:
 
 1. There are 189 documents and each are labeled with a single category.
 
-2. The four categories in the data set are Accountability, Health and Wellbeing, Human Resources, and Travel. Here's a breakdown of the number of documents per category:
+2. The four categories in the data set are Accountability, Health and Wellbeing, Human Resources, and Travel. <br/>
+
+Here's a breakdown of the number of documents per category:<br/>
 
 |Category|Number of Documents|
 |--------|-------------------|
@@ -36,9 +38,9 @@ After loading the data, here are a couple of observations on the data set:
 |Health and Wellbeing|11|
 |Human Resources|64|
 |Travel|74|
-
+<br/>
 As seen above, there's an imbalance in the data set particularly for the category, Health and Wellbeing. There are only 11 documents for this category compared to the rest which contains around 40 - 74. 
-
+<br/>
 Below is the breakdown in graphical form:
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/category_freq.png "Number of samples per Category")
