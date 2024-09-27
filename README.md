@@ -44,7 +44,7 @@ As seen above, we have an imbalance data set particularly for the category Healt
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/boxplot.png "Word Count Box Plot")
 
-The green line represents the average word count in each category and as observed, the average word count is less than 5000. Here's another way of looking at the distribution of the word count:\
+The green line represents the median word count in each category and as observed, the average word count is less than 5000. Here's another way of looking at the distribution of the word count:\
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/dist_wc_zoom.png "Category Word Count Distribution Zoomed")
 
@@ -85,32 +85,32 @@ Here's a summary of the metrics on unseen/test data:
 |-----------------|---------------|--------------|
 |Baseline Model|0.54|0.56|
 |Logistic Regression - Default Parameters|1.00|0.88|
-|Logistic Regression - Best Parameters|1.00|0.88|
-|Naive Bayes - Default Parameters|0.99|0.91|
-|Naive Bayes - Best Parameters|0.99|0.91|
+|Naive Bayes - Default Parameters|0.99|**0.91**|
 |Support Vector Machine - Default Parameters|0.94|0.84|
-|Support Vector Machine - Best Parameters|0.94|0.84|
-|XGBoost - Default Parameters|1.00|0.88|
-|XGBoost - Best Parameters|1.00|0.86|
+|XGBoost - Default Parameters|1.00|0.86|
+|Logistic Regression - Best Parameters|1.00|0.84|
+|Naive Bayes - Best Parameters|0.94|0.89|
+|Support Vector Machine - Best Parameters|0.97|0.87|
+|XGBoost - Best Parameters|1.00|0.83|
 
 ##### TF-IDF
 |Model Combination|Train AUC Score|Test AUC Score|
 |-----------------|---------------|--------------|
 |Baseline Model|0.56|0.59|
 |Logistic Regression - Default Parameters|0.99|0.90|
-|Logistic Regression - Best Parameters|0.99|0.90|
-|Naive Bayes - Default Parameters|0.96|**0.89**|
-|Naive Bayes - Best Parameters|0.96|0.89|
+|Naive Bayes - Default Parameters|0.96|0.89|
 |Support Vector Machine - Default Parameters|1.00|0.88|
-|Support Vector Machine - Best Parameters|1.07|0.88|
 |XGBoost - Default Parameters|1.00|0.86|
-|XGBoost - Best Parameters|1.00|0.86|
+|Logistic Regression - Best Parameters|1.00|0.88|
+|Naive Bayes - Best Parameters|0.93|0.87|
+|Support Vector Machine - Best Parameters|0.99|0.89|
+|XGBoost - Best Parameters|1.00|0.83|
 
 ### Best Model
 
-![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/cm_log_tuned.png "Confusion Matrix")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/cm_best.png "Confusion Matrix")
 
-![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/roc_log_tuned.png "ROC AUC")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/roc_best.png "ROC AUC")
 
 #### SHAP Analysis
 
