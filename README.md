@@ -1,4 +1,4 @@
-# Document Classifier: Final Report
+# Document Classifier
 
 This is the final report for the capstone project for [UC Berkeley Professional Certificate in Machine Learning and Artificial Intelligence](https://em-executive.berkeley.edu/professional-certificate-machine-learning-artificial-intelligence). 
 
@@ -14,7 +14,7 @@ The data that we need for this study will be the actual text in each document an
 - After collecting the links, there's another script that will read each pdf and extract the full text.  
 - The final data set will be a csv file with the actual full text and the category assigned.
 
-Once we have the final data set, data.csv, we will perform cleaning and transformation to prepare the data for  our analysis and modeling. Here are the steps done before starting with the analysis:
+Once we have the final data set, ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/data/data.csv "data.csv"), we will perform cleaning and transformation to prepare the data for our analysis and modeling. Here are the steps done before starting with the analysis:
 
 - Remove rows with null values.
 - Change all texts to lower case.
@@ -30,10 +30,11 @@ After loading the data, here are a couple of observations on the data set:
 
 |Category|Number of Documents|
 |--------|-------------------|
-|Travel|75|
-|Human Resources|66|
-|Accountability|42|
+|Accountability|40|
 |Health and Wellbeing|11|
+|Human Resources|64|
+|Travel|74|
+
 
 As seen above, we have an imbalance data set particularly for the category Health and Wellbeing. We only have 11 documents for this category compared to the rest. Below is the breakdown on a graphical form:
 
@@ -49,9 +50,9 @@ The green line represents the average word count in each category and as observe
 
 Again, most of the documents can be found on the left side of the graph. The word count for these are between 0 to 5000.
 
-3. The figure below shows the token extracted from the documents.
+3. The figure below shows the most common words in the data set.
 
-![alt text](https://github.com/cdungca/document-classifier/blob/main/images/wordcloud_travel.png "Travel Word Cloud")
+![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/wordcloud.png "Most Common Words in the Data Set")
 
 The size of the word represent the frequency it appeared in the entire data set.
 
@@ -79,26 +80,33 @@ Here are the results using different combinations of model, feature extraction (
 
 Here's a summary of the metrics on unseen/test data:
 
+##### Bag-of-words
 |Model Combination|Train AUC Score|Test AUC Score|
 |-----------------|---------------|--------------|
-|CountVectorizer - Baseline Model|0.54|0.49|
-|CountVectorizer - Logical Regression - Default Parameters|0.99|0.89|
-|CountVectorizer - Logical Regression - Best Parameters|0.99|0.89|
-|CountVectorizer - Naive Bayes - Default Parameters|0.98|0.91|
-|CountVectorizer - Naive Bayes - Best Parameters|0.98|0.91|
-|CountVectorizer - Support Vector Machine - Default Parameters|0.96|0.87|
-|CountVectorizer - Support Vector Machine - Best Parameters|0.96|0.87|
-|CountVectorizer - XGBoost - Default Parameters|1.00|0.88|
-|CountVectorizer - XGBoost - Best Parameters|1.00|0.88|
-|TfidVectorizer - Baseline Model|0.49|0.47|
-|TfidVectorizer - Logical Regression - Default Parameters|1.00|0.92|
-|TfidVectorizer - Logical Regression - Best Parameters|1.00|0.92|
-|TfidVectorizer - Naive Bayes - Default Parameters|0.98|**0.91**|
-|TfidVectorizer - Naive Bayes - Best Parameters|0.98|0.91|
-|TfidVectorizer - Support Vector Machine - Default Parameters|0.96|0.88|
-|TfidVectorizer - Support Vector Machine - Best Parameters|0.96|0.88|
-|TfidVectorizer - XGBoost - Default Parameters|1.00|0.86|
-|TfidVectorizer - XGBoost - Best Parameters|1.00|0.86|
+|Baseline Model|0.54|0.56|
+|Logistic Regression - Default Parameters|1.00|0.88|
+|Logistic Regression - Best Parameters|1.00|0.88|
+|Naive Bayes - Default Parameters|0.99|0.91|
+|Naive Bayes - Best Parameters|0.99|0.91|
+|Support Vector Machine - Default Parameters|0.94|0.84|
+|Support Vector Machine - Best Parameters|0.94|0.84|
+|XGBoost - Default Parameters|1.00|0.88|
+|XGBoost - Best Parameters|1.00|0.86|
+
+##### TF-IDF
+|Model Combination|Train AUC Score|Test AUC Score|
+|-----------------|---------------|--------------|
+|Baseline Model|0.56|0.59|
+|Logistic Regression - Default Parameters|0.99|0.90|
+|Logistic Regression - Best Parameters|0.99|0.90|
+|Naive Bayes - Default Parameters|0.96|**0.89**|
+|Naive Bayes - Best Parameters|0.96|0.89|
+|Support Vector Machine - Default Parameters|1.00|0.88|
+|Support Vector Machine - Best Parameters|1.07|0.88|
+|XGBoost - Default Parameters|1.00|0.86|
+|XGBoost - Best Parameters|1.00|0.86|
+
+### Best Model
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/cm_log_tuned.png "Confusion Matrix")
 
