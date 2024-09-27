@@ -135,7 +135,7 @@ Travel - **20 out of 23**<br/>
 
 #### SHAP Analysis
 
-Here are some graphs that shows the most important words that contributed for each category:
+Here are graphs that show the most important words for each category:
 <br/>
 <br/>
 **Most Important Words for Accountability**
