@@ -125,14 +125,15 @@ Finally, the confusion matrix below shows the performance of the model on accura
 
 The model correctly predicted the actual category each class:
 
-Accountabily - 10 out of 12<br/>
-Health and Wellbeing - 3 of 3<br/>
-Human Resources - 10 out of 19<br/>
-Travel - 20 out of 23<br/>
+Accountabily - **10 out of 12**<br/>
+Health and Wellbeing - **3 of 3**<br/>
+Human Resources - **10 out of 19**<br/>
+Travel - **20 out of 23**<br/>
 
 #### SHAP Analysis
 
 Here are some graphs that shows the most important words that contributed for each category:
+<br/>
 <br/>
 **Most Important Words for Accountability**
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/shap_accountability.png "SHAP Accountability")
