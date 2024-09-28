@@ -126,7 +126,7 @@ Finally, the confusion matrix below shows the performance of the model on accura
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/cm_best.png "Confusion Matrix")
 
-The model correctly predicted the actual category each class:
+The number of documents correctly categorized in each class are as follows:
 
 Accountabily - **10 out of 12**<br/>
 Health and Wellbeing - **3 of 3**<br/>
