@@ -6,7 +6,7 @@ The documents for classification are taken from the UN website, called [Policy P
 
 ## Data Collection and Preparation
 
-The data that needed for this study will be the actual text in each document and the category it was assigned to. The process of extracting these information and compiling it to a usable format will be as follows:
+The data that is needed for this study will be the actual text in each document and the category it was assigned to. The process of extracting these information and compiling it to a usable format will be as follows:
 
 - The links to the documents with their corresponding category can be extracted from the [Search Portal](https://policy.un.org/policy-all) page. There's a utility script to scrape the links and their assigned category and write them in a csv file.
 - After collecting the links, there's another script that will read each pdf and extract the full text.  
@@ -16,7 +16,7 @@ To prepare the data for the analysis/modeling, the following steps and transform
 
 - Remove rows with null values.
 - Change all texts to lower case.
-- Remove stop words. Stop words are common words such as and, the, an, which provide little meaning in the document.
+- Remove stop words. Stop words are common words (e.g. and, the, etc.) which provide little meaning in the document.
 - Remove punctuation marks.
 - Perform tokenization. This process breaks down the full text into words.
 
@@ -64,8 +64,8 @@ Again, most of the documents can be found on the left side of the graph. The wor
 
 Before modeling, the data set will be split into: 70% training and 30% test set.
 
-Training set contains 132 documents.<br/>
-Test set contains 57 documents.
+Training set contains **132 documents**.<br/>
+Test set contains **57 documents**.
 
 ## Modeling
 
@@ -118,7 +118,7 @@ The best model with the highest micro recall score on the test set is XGBoost us
 
 The Micro Recall Score using the test set is **0.75**. The perfect score for the recall is 1.0.
 
-To further explore the performance of this model, the ROC AUC (area under the cureve) score is used.  ROC AUC shows the performanc of the model at various threshold settings. 
+To further explore the performance of this model, the ROC AUC (area under the cureve) score is used.  ROC AUC shows the performance of the model at various threshold settings. 
 
 ![alt text](https://github.com/cdungca/document-classifier-final/blob/main/images/roc_best.png "ROC AUC")
 
